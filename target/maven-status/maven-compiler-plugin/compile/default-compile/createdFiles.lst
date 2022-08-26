@@ -1,0 +1,7 @@
+com/babalola/breweryservicems/BreweryServiceMsApplication.class
+com/babalola/breweryservicems/models/BeerDTO.class
+com/babalola/breweryservicems/models/BeerDTO$BeerDTOBuilder.class
+com/babalola/breweryservicems/models/CustomerDTO$CustomerDTOBuilder.class
+com/babalola/breweryservicems/models/CustomerDTO.class
+com/babalola/breweryservicems/client/BreweryClient.class
+com/babalola/breweryservicems/client/package-info.class
