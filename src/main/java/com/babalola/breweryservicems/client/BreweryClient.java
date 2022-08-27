@@ -4,6 +4,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
+
+import java.net.URI;
 import java.util.UUID;
 
 @ConfigurationProperties(prefix = "babalola.brewery", ignoreUnknownFields = false)
@@ -19,7 +21,10 @@ public class BreweryClient {
 
     public BeerDTO getBeerById(UUID beerId) {
         return restTemplate.getForObject(apiHost + BEER_SERVICE_PATH + beerId, BeerDTO.class);
+    }
 
+    public URI saveNewBeer(BeerDTO newBeer) {
+        return restTemplate.postForLocation(apiHost + BEER_SERVICE_PATH, newBeer);
     }
 
     public void setApiHost(String apiHost) {
