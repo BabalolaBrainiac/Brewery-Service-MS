@@ -1,5 +1,4 @@
 package com.babalola.breweryservicems.config;
-
 import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
 import org.apache.http.impl.nio.client.HttpAsyncClients;
 import org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager;
@@ -36,6 +35,7 @@ public class NIORestTemplateCustomizer implements RestTemplateCustomizer {
     public void customize(RestTemplate restTemplate) {
         try {
             restTemplate.setRequestFactory(clientHttpRequestFactory());
+            System.out.println("Using config");
         } catch (IOReactorException e) {
             e.printStackTrace();
         }
